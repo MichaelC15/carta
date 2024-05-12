@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Declaración de amor </title>
+<style>
+    body {
+        /*display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5; /* Color de fondo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczN8LRvAxY1rCXCY24AEXsvGEq-NQZcAvZ2SVBkSJZ1BFIOjZ-dQSeK3azxfMzOuaSzHvUi76tLn2f-D_xmJ4eULimcaVqibdYv7zEjCwrqjDMWNqY4mdFvYbusBNHikRnftmZj0GA0HvU2VK4cAmNymk7CWvvj8PdaGMlobno8kuxqcXFjXqNERS94t26NfaPTD6hxF1HHYRVpsPrx9WWkV9hNwyqPMkyY8CK1ApjeFS-VULyefPPKhV5XVt-BbXGsFa23nHDOH8sUKcLQFdkVFA5iQNUA3kB0K9xr_qZEEs2E7PNRP2mSXP9WS-zoi_ZR8_0eAZ5je7s5QyS390e1cUC9xLbIRu6Am9lv6gpKXoZrBwkgqDjkhf4Kt5jWcZmy3oTruIFTz1Eslb3rj_LrB_5kRG3FpKWFyKb0NsT9wnqXC2aKk99cfneyXOPCrFY9c6kFDbbSm94U_rZQ1EyyzjxQnm3gcX1g985YYP1tEaCk5wL4mmKN2dCQwZr3l8MxvCuEhyMxqVUk12DiIucufYg1JOHgrKKAz__3Ku1rnM9ceKO0VwZuTRE3F0nVTsfCDJRFiwCqSsaR3I38t5StTJAqs1Sj7UR55GhNDL_qPYQDy1emX--s380TaLtgEmHAQ5RkZhLcGegNtUTvDK75u3-_Znt4MQzvrFLfdPXPisJcbaVNV7iNlXoTOUWotBzYOei_P_xPWKW7NDQm3IyFscO7LMVbb3nrc1XWf72Hn7KnHjh0hjSnnlQeWhKiCd-sdzyJY_pGnIEnMlGMjQuyL76dptySGkSFNPoQwQMoy3Ez3Khzh8qzbuRVGj62MUMjMAa_YzS4ACneZAoBD7XWIpN33Wj9RhRaE0caVNTIU_WqZWVMDDOdUJXU1lxyhocXBRr6ptDyz6eXkx9D9Oxg9lCjFZFw5xds6OF9ZejYztJ3_XnObefrcCKw31GY=w1280-h667-s-no-gm?authuser=1'); /* Cambia 'url_de_tu_imagen.jpg' por la URL de tu imagen */
+        background-size: cover; /* Para que la imagen se ajuste y cubra todo el cuerpo */
+        background-position: center; /* Para centrar la imagen */
+        
+    }
+
+    .question-container {
+        text-align: center;
+    }
+
+    #yesBtn {
+        padding: 20px 40px;
+        font-size: 24px;
+        margin: 15px;
+        cursor: pointer;
+        background-color: #4CAF50; /* Verde */
+        color: white;
+        border: 2px solid #4CAF50;
+        border-radius: 20px;
+        transition: transform 0.3s; /* Agregamos transición para suavizar el cambio de tamaño */
+    }
+
+    #noBtn {
+        padding: 20px 40px;
+        font-size: 24px;
+        margin: 15px;
+        cursor: pointer;
+        background-color: #FF5733; /* Rojo */
+        color: white;
+        border: 2px solid #FFC0CB;
+        border-radius: 20px;
+    }
+
+    #noBtn span {
+        font-size: 28px;
+        color: #FCF4F4;
+    }
+
+    #message {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: white; /* Color de fondo */
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    }
+
+    #message img {
+        display: block;
+        margin: 0 auto 50px; /* Centrar la imagen */
+        width: 200px; /* Tamaño de la imagen */
+        height: auto;
+    }
+
+    #message p {
+        font-size: 28px;
+    }
+</style>
+</head>
+<body>
+<div class="question-container">
+    <img src="" alt="Osito" style="width: 300px;">
+    <p style="font-size: 50px;">Jazmin, ¿Quieres ser mi novia?</p>
+    <div class="btn-container">
+        <button id="yesBtn" class="btn">Sí</button>
+        <button id="noBtn" class="btn">No</button>
+    </div>
+</div>
+
+<div id="message" style="display: none;">
+    <img src="https://i.pinimg.com/originals/41/a3/b7/41a3b7f2da4a529fb816bfedbcafc6bc.gif" alt="Osito" style="width: 300px;">
+    <p>¡SIIIIIUUUU! Sabía que me amas, sabia que me amas..... A partir de ahora me llamaras mi amor he dicho. Ya perteneces a alguien XD y eres toda mia espero te quede claro hermosa, me encanta todo de ti.. TODOOOO my love.</p>
+</div>
+
+<script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const message = document.getElementById('message');
+    const texts = ['Por favor dime que sí', 'no seas mala', 'dale acepta', 'Se que me amas', 'No te hagas de rogar', 'Ya dime que sí','no seas malita','Por favor bb'];
+
+    let currentIndex = 0;
+    let scaleFactor = 1;
+
+    noBtn.addEventListener('click', function() {
+        yesBtn.style.transform = `scale(${scaleFactor})`;
+        scaleFactor += 0.4;
+        yesBtn.innerHTML = 'Sí';
+        noBtn.innerHTML = texts[currentIndex];
+        currentIndex = (currentIndex + 1) % texts.length;
+    });
+
+    yesBtn.addEventListener('click', function() {
+        message.style.display = 'block';
+    });
+
+</script>
+</body>
+</html>
